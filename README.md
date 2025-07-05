@@ -95,6 +95,17 @@
 
 
 <hr>
+<hr>
+<div dir="rtl" style="border-right: 4px solid #ccc; padding-right: 15px; margin: 1em 0;">
+  <p>این پروژه با عشق به دنیای انیمه توسط <b>Kthree</b> ساخته شده است. اگر این راهنما به شما کمک کرد، باعث خوشحالی من است.</p>
+  <p dir="ltr" align="center" style="margin-top: 15px;">
+    <strong>Made with ❤️ by Kthree</strong>
+  </p>
+</div>
+<hr>
+<hr>
+
+
 
 <h2>پرامپت اصلی برای Gemini</h2>
 <p>این پرامپت را در مرحله سوم در Google AI Studio وارد کنید.</p>
