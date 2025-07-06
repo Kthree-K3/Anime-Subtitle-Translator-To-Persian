@@ -1,4 +1,4 @@
-# Anime Subtitle Translation Persian
+# Anime Subtitle Translation To Persian
 آموزش قدم به قدم برای ترجمه زیرنویس انیمه به فارسی با هوش مصنوعی Gemini
 <div dir="rtl">
 
