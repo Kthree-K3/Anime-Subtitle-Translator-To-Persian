@@ -34,6 +34,7 @@
 <h2>مرحله دوم: تنظیم محیط ترجمه در Google AI Studio</h2>
 <p>حالا وقت آن است که با Gemini کار کنیم.</p>
 <ol>
+  <li>ابتدا وارد اکانت گوگل خود شوید</li>
   <li>با یک فیلترشکن مناسب، وارد سایت <b><a href="https://aistudio.google.com/prompts/new_chat">Google AI Studio</a></b> شوید.</li>
    <li>سپس از پنل تنظیمات در سمت راست، مدل (<code>Model</code>) را روی <b>Gemini 2.5 Pro</b> تنظیم کنید.</li> 
  <br> <p align="center"><img src="images/Select-gemini.jpg"/></p> <br>
