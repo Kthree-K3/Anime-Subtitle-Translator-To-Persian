@@ -382,10 +382,10 @@
 
     copyButton.addEventListener('click', () => {
         navigator.clipboard.writeText(textToCopy).then(() => {
-            copyButton.textContent = 'کپی شد!';
+            copyButton.textContent = 'پراپمت کپی شد!';
             copyButton.classList.add('copied');
             setTimeout(() => {
-                copyButton.textContent = 'کپی';
+                copyButton.textContent = 'کپی پراپمت';
                 copyButton.classList.remove('copied');
             }, 2000);
         }).catch(err => {
