@@ -54,7 +54,6 @@
             text-decoration: underline;
         }
 
-        /* Style for inline code snippets like .txt */
         code {
             background-color: #444;
             color: #f0f0f0;
@@ -84,7 +83,6 @@
             margin: 40px 0;
         }
 
-        /* --- STYLES FOR PROMPT BLOCK --- */
         .prompt-container {
             position: relative;
             border: 1px solid #4a4a4a;
@@ -131,12 +129,10 @@
             overflow: auto;
         }
         
-        /* === THIS IS THE FIX === */
-        /* It removes the gray background ONLY from the code tag inside the prompt block */
         .prompt-container pre code {
-            background-color: transparent; /* Remove background */
-            color: #d4d4d4; /* Set text color */
-            padding: 0; /* Remove extra padding */
+            background-color: transparent;
+            color: #d4d4d4;
+            padding: 0;
             font-family: 'Consolas', 'Menlo', 'Courier New', monospace;
             direction: ltr;
             text-align: left;
@@ -149,6 +145,40 @@
         .prompt-container pre::-webkit-scrollbar-thumb { background: #555; border-radius: 5px; }
         .prompt-container pre::-webkit-scrollbar-thumb:hover { background: #e94560; }
 
+        /* === CSS FOR THE GITHUB BUTTON ADDED HERE === */
+        .button-group {
+            display: flex;
+            justify-content: center;
+            margin-top: 30px;
+        }
+
+        .btn {
+            display: inline-flex;
+            align-items: center;
+            gap: 8px;
+            padding: 12px 24px;
+            border: 1px solid #666;
+            border-radius: 8px;
+            color: #e0e0e0;
+            background-color: transparent;
+            text-decoration: none;
+            font-size: 1em;
+            font-family: 'Vazirmatn', sans-serif;
+            transition: background-color 0.3s, color 0.3s, border-color 0.3s;
+            cursor: pointer;
+        }
+
+        .btn:hover {
+            background-color: #e94560;
+            border-color: #e94560;
+            color: #ffffff;
+        }
+
+        .btn svg {
+            width: 20px;
+            height: 20px;
+            fill: currentColor;
+        }
     </style>
 </head>
 <body>
@@ -169,14 +199,11 @@
 <hr>
 
 <h3>مقدمه: فراتر از یک ترجمه ماشینی</h3>
-
 <p>اگر شما هم به دنبال یک ترجمه‌ی بی‌نقص برای زیرنویس انیمه با استفاده از هوش مصنوعی هستید، حتماً با چالش‌های ابزارهای فعلی آشنایید: ترجمه‌های تحت‌اللفظی، عدم درک لحن و اشتباهات فرهنگی.</p>
 <p>مدل <b>Gemini 2.5 Pro</b> این بازی را تغییر داده، اما استفاده بهینه از آن نیازمند یک رویکرد هوشمندانه است.</p>
 <p>راز اصلی در بهینه‌سازی داده ورودی نهفته است. با حذف اطلاعات اضافی مانند تایم‌کدها و تمرکز مدل صرفاً روی دیالوگ، می‌توانیم به نتایجی دست پیدا کنیم که به طرز شگفت‌انگیزی به ترجمه انسانی نزدیک است.</p>
 <p>این راهنما یک دستورالعمل عملی و سریع برای دستیابی به همین هدف است. بیایید با هم یاد بگیریم چطور از قدرت کامل Gemini برای خلق زیرنویس‌هایی حرفه‌ای استفاده کنیم.</p>
-
 <hr>
-
 <h2>مرحله اول: آماده‌سازی فایل زیرنویس (حذف تایم‌کدها)</h2>
 <p>در این مرحله، فایل زیرنویس خام را به یک فایل متنی ساده و کم‌حجم تبدیل می‌کنیم.</p>
 <ol>
@@ -188,10 +215,7 @@
   <li>در نهایت، به محلی که فایل را ذخیره کردید بروید و پسوند آن را به صورت دستی از <code>.sub</code> به <code>.txt</code> تغییر دهید.</li>
 </ol>
 <p><b>خروجی این مرحله:</b> یک فایل متنی ساده که فقط شامل تایم‌فریم و دیالوگ‌هاست.</p>
-
-
 <hr>
-
 <h2>مرحله دوم: تنظیم محیط ترجمه در Google AI Studio</h2>
 <p>حالا وقت آن است که با Gemini کار کنیم.</p>
 <ol>
@@ -215,13 +239,10 @@
   </li>
 </ol>
 <p>این تنظیمات به مدل کمک می‌کند تا به جای خلاقیت بیش از حد، به دستورات شما (پرامپت) وفادار بماند و ترجمه‌ای دقیق‌تر ارائه دهد.</p>
-
-
 <hr>
-
 <h2>مرحله سوم: ارسال دستور (پرامپت) و شروع ترجمه</h2>
 <ol>
-  <li>پرامپت را کپی کرده و در کادر چت Google AI Studio پیست و ارسال کنید.</li>
+  <li>پرامپت را کپی کرده و در کادر چت Google AI Studio پیست و ارسال کنید.
   <div class="prompt-container">
     <div class="prompt-header">
         <span>Gemini Prompt</span>
@@ -273,10 +294,11 @@
 
 توجه: در صورتی که چندین فایل زیرنویس دریافت کردید، لازم است دستورات فرایند پردازش و ترجمه  را به صورت جداگانه برای هر فایل اجرا نمایید و خروجی مربوط به هر فایل را نیز به طور مستقل و مطابق با قوانین تعیین‌شده ارائه دهید.
 
-**تأکید نهایی:** شما باید تمامی این دستورالعمل‌ها را با دقت مرور کرده و اطمینان حاصل کنید که خروجی شما دقیقاً مطابق با موارد ذکر شده است. هدف، ارائه یک ترجمه حرفه‌ای و بی‌نقص است که نیازی به ویرایش مجدد نداشته باشد.</code></pre>
+**تأکید نهایی:** شما باید تمامی این دستورالعمل‌ها را با دقت مرور کرده و اطمینان حاصل کنید که خروجی شما دقیقاً مطابق با موارد ذکر شده است. هدف، ارائه یک ترجمه حرفه‌ای و بی‌نقص است که نیازی به ویرایش مجدد نداشته باشد.
+</code></pre>
 </div>
 
-</div>
+</li>
   <li><b>(اختیاری اما پیشنهادی)</b> پس از ارسال پرامپت، می‌توانید آن را <code>Save</code> کنید تا برای استفاده‌های بعدی در <code>History</code> شما ذخیره شود.</li>
   <br><p align="center"><img src="images/Untitled2.jpg" alt="Save Prompt"/></p>  <br>
   <br><p align="center"><img src="images/history.png" alt="Prompt History"/> </p> <br>
@@ -312,7 +334,6 @@
 
 
 <hr>
-<hr>
 <div dir="rtl" style="text-align: center; border-right: 4px solid #ccc; padding-right: 15px; margin: 1em 0;">
   <p>این پروژه با عشق به دنیای انیمه توسط <b>Kthree</b> ساخته شده است. اگر این راهنما به شما کمک کرد، باعث خوشحالی من است.</p>
   <p dir="ltr" style="margin-top: 15px;">
@@ -320,20 +341,14 @@
   </p>
 </div>
 <hr>
-<hr>
 
-    
-<!-- === OLD BUTTON REMOVED AND REPLACED WITH THIS NEW ONE === -->
+<!-- === GITHUB BUTTON SECTION === -->
 <div class="button-group">
-    <a href="https://github.com/Kthree-K3/K3-Manga-Translator-Editor-edition" target="_blank" class="btn">
+    <a href="https://github.com/Kthree-K3/Anime-Subtitle-Translation-To-Persian" target="_blank" class="btn">
         <svg xmlns="http://www.w3.org/2000/svg" viewBox="0 0 16 16"><path d="M8 0C3.58 0 0 3.58 0 8c0 3.54 2.29 6.53 5.47 7.59.4.07.55-.17.55-.38 0-.19-.01-.82-.01-1.49-2.01.37-2.53-.49-2.69-.94-.09-.23-.48-.94-.82-1.13-.28-.15-.68-.52-.01-.53.63-.01 1.08.58 1.23.82.72 1.21 1.87.87 2.33.66.07-.52.28-.87.51-1.07-1.78-.2-3.64-.89-3.64-3.95 0-.87.31-1.59.82-2.15-.08-.2-.36-1.02.08-2.12 0 0 .67-.21 2.2.82.64-.18 1.32-.27 2-.27.68 0 1.36.09 2 .27 1.53-1.04 2.2-.82 2.2-.82.44 1.1.16 1.92.08 2.12.51.56.82 1.27.82 2.15 0 3.07-1.87 3.75-3.65 3.95.29.25.54.73.54 1.48 0 1.07-.01 1.93-.01 2.2 0 .21.15.46.55.38A8.013 8.013 0 0016 8c0-4.42-3.58-8-8-8z"/></svg>
         <span>گیت‌هاب</span>
     </a>
 </div>
-
-<!-- END OF YOUR CONTENT -->
-
-
 
 </div>
 
