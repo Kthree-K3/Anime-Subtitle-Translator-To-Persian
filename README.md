@@ -1,4 +1,4 @@
-# Anime Subtitle Translation To Persian
+# Anime Subtitle Translator To Persian
 
 <div dir="rtl">
 <h1>راهنمای کامل ترجمه حرفه‌ای زیرنویس انیمه با Gemini 2.5 Pro</h1>
