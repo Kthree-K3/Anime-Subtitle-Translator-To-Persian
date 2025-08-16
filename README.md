@@ -19,7 +19,7 @@
 <h2>🚀 راهنمای کامل، آموزش و پرامپت نهایی</h2>
 <p>آموزش کامل، تصویری و قدم به قدم این پروژه، به همراه پرامپت نهایی برای کپی کردن، در صفحه اختصاصی زیر قرار دارد. برای شروع، روی لینک زیر کلیک کنید:</p>
 
-### <a href="https://kthree-k3.github.io/Anime-Subtitle-Translation-To-Persian/">🔗 مشاهده آموزش کامل پروژه</a>
+### <a href="https://kthree-k3.github.io/Anime-Subtitle-Translator-To-Persian/">🔗 مشاهده آموزش کامل پروژه</a>
 
 <br>
 <hr>
